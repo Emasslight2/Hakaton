@@ -43,9 +43,6 @@ nav .container{
     width: auto;
     border-radius: 50%;
 }
-.nav-links{
-    
-}
 .nav-links a{
     font-size: 18px;
     margin: 0 3vw 0 3vw;
@@ -61,7 +58,13 @@ header{
     background: rgba(126, 190, 206, 0.425);
     z-index:1;
 }
-
+#slider{
+    height:100%;
+    overflow: hidden;
+}
+.slider-image{
+    height:100%;
+}
 @media (max-width:1080px){
     .container{
         width:80%;
