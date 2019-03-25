@@ -46,17 +46,12 @@ nav .container{
     border-radius: 0%;
 }
 .nav-links a{
-    padding-bottom: 5px;
+    box-sizing:border-box;
     font-size: 18px;
     margin: 0 3vw 0 3vw;
     text-decoration: none;
     font-weight: bold;
     color:#FFFFFF;
-    border-bottom: 2px solid #FFFFFF; 
-    border-radius: 5%;
-}
-.nav-links a:hover{
-    padding-bottom: 10px;
 }
 header{
     box-sizing: border-box;
@@ -65,27 +60,26 @@ header{
     width: 100vw;
     max-width:100%;
     height: 100vh;
-    border:1px solid green;
-    z-index:1;
 }
 #slider{
     position: relative;
     height:100%;
     overflow: hidden;
+    z-index:1;
 }
 .slider-image{
     opacity:0;
     position: absolute;
     animation-name:scale-image;
-    animation-duration: 12s;
+    animation-duration: 9s;
     animation-iteration-count: infinite;
     height:100%;
 }
 #slider img:nth-child(2){
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 #slider img:nth-child(3){
-    animation-delay: 8s;
+    animation-delay: 6s;
 }
 @keyframes scale-image{
     0%{
@@ -100,6 +94,55 @@ header{
         transform: scale(1.1);
     }
 }
+#slider-text-sec{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:2;
+    font-size: 50px;
+    color:red;
+}
+#slider-slp-text-cntr{
+    position: relative;
+    border:2px solid #FFFFFF;
+    display:inline-block;
+}
+.absolute-filler{
+    opacity:0;
+}
+.slider-spl-text{
+    position: absolute;
+    top:0;
+    left:0;
+    animation-name: sliderSpl;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+.slider-spl-text:nth-child(2){
+    animation-delay: 1500ms;
+}
+.slider-spl-text:nth-child(3){
+    animation-delay: 3000ms;
+}
+@keyframes sliderSpl{
+    0%{
+        opacity:0;
+        top:20px;
+    }
+    40%{
+        opacity:1;
+        top:0;
+    }
+    100%{
+        opacity:0;
+        top:-20px;
+    }
+}
+
+
 @media (max-width:1080px){
     .container{
         width:80%;
