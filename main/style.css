@@ -49,7 +49,7 @@ nav .container{
     transition: 500ms;
 }
 .logo:hover{
-    border-radius: 0%;
+    border-radius: 10%;
 }
 .nav-links a{
     box-sizing:border-box;
@@ -116,8 +116,7 @@ header{
 }
 #slider-slp-text-cntr{
     position: relative;
-    display:inline-block;
-    box-shadow: 3px 10px 22px -1px #477347;
+    display:inline-block;  
 }
 .absolute-filler{
     opacity:0;
