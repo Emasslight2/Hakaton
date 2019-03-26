@@ -33,7 +33,6 @@ nav{
     justify-content: center;
 }
 .container{
-    display: block;
     width:60%;
     height:auto;
 }
@@ -180,6 +179,13 @@ header{
     100%{
         bottom:10px;
     }
+}
+
+.whole-sec{
+    width: 100vw;
+    max-width:100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
 }
 @media (max-width:1080px){
     .container{
