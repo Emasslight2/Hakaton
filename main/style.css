@@ -3,7 +3,8 @@ body{
     padding:0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Roboto', sans-serif;
 }
 /*  
     cntr - container;
@@ -186,22 +187,21 @@ header{
     box-sizing: border-box;
     width: 100vw;
     max-width:100%;
-    min-height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     padding:20px;
 }
-#why-sec .centrate{
+#why-sec .centrate, #offer-sec .centrate{
     flex-direction: column;
     color:#FFFFFF;
 }
-#why-sec h2{
-    margin:20px 0 20px 0;
+.sec-h2{
+    margin:40px 0 20px 0;
     font-size: 36px;
     font-weight: normal;
     text-align: center;
 }
 #why-sec p{
-    margin:20px 0 20px 0;
+    margin:40px 0 40px 0;
     max-width: 520px;
     font-size: 18px;
     text-align: center;
@@ -274,6 +274,81 @@ header{
     bottom:0;
     background-color: rgba(0,0,0,0.5);
 }
+
+#offer-sec{
+    flex-direction: column;
+}
+#offer-sec .sec-h2{
+    font-size:24px;
+}
+.list-caption{
+    font-size: 24px;
+    display: block;
+    width:100%;
+}
+#ol-list{
+    width:100%;
+    font-size: 24px;
+}
+
+.sec-h3{
+    color:#FFFFFF;
+    font-size: 24px;
+}
+#offer-flex{
+    width:100vw;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#paper{
+    background-image: url("../images/parallax/paper.jpg");
+}
+#metal{
+    background-image: url("../images/parallax/metal.jpg");
+}
+#glass{
+    background-image: url("../images/parallax/glass.jpg");
+}
+#plastic{
+    background-image: url("../images/parallax/plastic.jpg");
+}
+.parallax{
+    position: relative;
+    margin:10px 0 10px 0;
+    width:100vw;
+    max-width:40%;
+    height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 500ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: green 1px 0 10px;
+    box-shadow: 1px 1px 12px 1px #000000;
+    border-radius: 10px;
+}
+.parallax-name{
+    opacity: 1;
+    transition: 500ms;
+}
+.parallax-description{
+    transition: 500ms;
+    opacity: 0;
+}
+/* .parallax:hover{
+    height:400px;
+} */
+.parallax:hover .parallax-name{
+    opacity: 0;
+}
+.parallax:hover .parallax-description{
+    opacity: 1;
+}
+
 @media (max-width:1080px){
     .container{
         width:80%;
