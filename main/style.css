@@ -26,6 +26,10 @@ nav{
     z-index:3;
     box-shadow: 3px 10px 22px -1px #477347;
     background: rgba(0, 0, 0, 0.5);
+    transition: 300ms;
+}
+nav:hover{
+    background: rgba(0, 0, 0, 0.3);
 }
 .centrate{
     display: flex;
@@ -50,19 +54,28 @@ nav .container{
 }
 .logo:hover{
     border-radius: 10%;
+    transform: scale(1.1);
 }
 .nav-links{
     display: flex;
     flex-wrap: wrap;
 }
 .nav-links a{
-    box-sizing:border-box;
+
     font-size: 18px;
     margin: 0 0 0 2vw;
+    padding: 0 5px 0 5px;
     text-decoration: none;
     font-weight: bold;
     color:#FFFFFF;
     text-shadow: green 1px 0 10px;
+    border-left:2px solid rgba(93, 248, 73, 0);
+    border-right:2px solid rgba(93, 248, 73, 0);
+    transition: 300ms;
+}
+.nav-links a:hover{
+    border-left:2px solid rgba(93, 248, 73, 0.5);
+    border-right:2px solid rgba(93, 248, 73, 0.5);
 }
 header{
     box-sizing: border-box;
@@ -214,11 +227,14 @@ header{
     grid-column-gap: 20px;
     grid-row-gap: 10px;
     grid-template-rows: 30vh 30vh;
+    
 }
 .grid-area{
     max-width:400px;
     overflow: hidden;
     position: relative;
+    box-shadow: 1px 1px 10px -1px #477347;
+    border-radius: 10px;
 }
 #one{
     grid-area:one;
@@ -241,14 +257,15 @@ header{
     width:100%;
     height: 100%;
     background-color: rgba(0,0,0,0);
-    transition: 500ms;
+    transition: 600ms;
     display: flex;
 }
 .grid-overlay span{
     font-size: 36px;
-    color:#FFE5E5;
+    color:#FFFFFF;
     display: block;
     margin:20px;
+    text-shadow: green 1px 0 10px;
 }
 #one .grid-overlay{
     top:100%;
@@ -256,7 +273,7 @@ header{
 }
 #one:hover .grid-overlay{
     top:0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
 }
 #two .grid-overlay{
     top:100%;
@@ -358,6 +375,12 @@ header{
     width:700px;
     max-width: 100%;
     height:400px;
+}
+
+footer{
+    height:20vh;
+    background: rgba(0, 0, 0, 0.9);
+    color:#FFFFFF;
 }
 @media (max-width:1080px){
     .container{
