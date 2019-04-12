@@ -11,6 +11,13 @@ body{
     spl - special; 
     sec - section; 
 */
+:root{
+    --nav: rgba(0, 0, 0, 0.8);
+    --nav-hover: rgba(0, 0, 0, 1);
+    --main:rgba(0, 0, 0, 0.8);
+    --nav-shadow:3px 10px 22px -1px #477347;
+    --nav-text-shadow:green 1px 0 10px;
+}
 nav{
     box-sizing: border-box;
     margin:0;
@@ -24,12 +31,12 @@ nav{
     height: 10vh;
     border-bottom: 1px solid #FFFFFF;
     z-index:3;
-    box-shadow: 3px 10px 22px -1px #477347;
-    background: rgba(0, 0, 0, 0.8);
+    box-shadow: var(--nav-shadow);
+    background: var(--nav);
     transition: 300ms;
 }
 nav:hover{
-    background: rgba(0, 0, 0, 1);
+    background: var(--nav-hover);
 }
 .logo-nav{
     height:100%;
@@ -71,7 +78,7 @@ nav .container{
     text-decoration: none;
     font-weight: bold;
     color:#FFFFFF;
-    text-shadow: green 1px 0 10px;
+    text-shadow: var(--nav-text-shadow);
     border-left:2px solid rgba(93, 248, 73, 0);
     border-right:2px solid rgba(93, 248, 73, 0);
     transition: 300ms;
@@ -105,18 +112,33 @@ nav .container{
 }
 
 /* dropdown end */
-header{
+main{
     box-sizing: border-box;
-    display: block;
     position: relative;
     width: 100vw;
     max-width:100%;
-    height: 100vh;
+    min-height: 100vh;
+    background: var(--main);
+    padding-top:40px;
+    padding-bottom:20px;
 }
-#wrapped{
-    display: flex;
+main .container{
+    margin:auto;
 }
-
+#bright-list{
+    background-color: #FFFFFF;
+    border-radius:10px;
+    box-shadow: 1px 1px 15px -1px #477347;
+    padding:2px;
+    box-sizing: border-box;
+}
+.list{
+    height:200px;
+    border-bottom:1px solid grey;
+}
+.photo{
+    width:10px;
+}
 footer{
     height:20vh;
     background: rgba(0, 0, 0, 0.9);
