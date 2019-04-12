@@ -118,7 +118,6 @@ main{
     position: relative;
     width: 100vw;
     max-width:100%;
-    min-height: 100vh;
     background: var(--main);
     padding-top:40px;
     padding-bottom:20px;
@@ -241,6 +240,40 @@ main .container{
     justify-content: center;
 }
 
+#levels-sec{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.list h3{
+    margin:0;
+}
+#levels-cntr{
+    box-sizing: border-box;
+    width:90%;
+    min-height:200px;
+    border:1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding:5px;
+}
+.icon{
+    margin:2px;
+    width:50px;
+    height:50px;
+    
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size:32px;
+    color:rgba(255,255,255,0);
+    text-shadow: var(--nav-text-shadow);
+    transition:200ms;
+}
+.icon:hover{
+    color:rgba(255,255,255,1);
+}
 footer{
     height:20vh;
     background: rgba(0, 0, 0, 0.9);
