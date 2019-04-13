@@ -51,7 +51,7 @@ elem.innerHTML = `
   })();
 
 
-for(let i = 1; i <= users[2].level;i++){
+for(let i = 1; i <= users[0].level;i++){
     (function() {
         var elem = document.createElement("div");
             elem.classList.add('icon');
@@ -85,7 +85,7 @@ for(let i = 1; i <= users[2].level;i++){
                 elem.style.border = '3px solid lightblue';
             }
             else if(i%10==5){
-                elem.style.border = '3px solid black';
+                elem.style.border = '3px solid navy';
             }
             else if(i%10==6){
                 elem.style.border = '3px solid orange';

@@ -246,15 +246,22 @@ main .container{
 }
 .list h3{
     margin:0;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 #levels-cntr{
     box-sizing: border-box;
     width:90%;
     min-height:200px;
     border:1px solid black;
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     padding:5px;
+    transition: 200ms;
+}
+#levels-cntr:hover{
+    box-shadow: var(--black-shadow);
 }
 .icon{
     margin:2px;
