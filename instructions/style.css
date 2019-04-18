@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 16px;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+/*  
+    cntr - container;
+    spl - special; 
+    sec - section; 
+*/
+:root{
+    --nav: rgba(0, 0, 0, 0.8);
+    --nav-hover: rgba(0, 0, 0, 1);
+    --main:rgba(0, 0, 0, 0.8);
+    --nav-shadow:3px 10px 22px -1px #477347;
+    --nav-text-shadow:green 1px 0 10px;
+    --black-shadow: 1px 1px 12px 1px #000000;
+}
+nav{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100vw;
+    max-width:100%;
+    height: 10vh;
+    border-bottom: 1px solid #FFFFFF;
+    z-index:3;
+    box-shadow: var(--nav-shadow);
+    background: var(--nav);
+    transition: 300ms;
+}
+nav:hover{
+    background: var(--nav-hover);
+}
+.logo-nav{
+    height:100%;
+    max-height: 90%;
+}
+.centrate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width:60%;
+    height:auto;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+}
+.logo{
+    max-height:90%;
+    width: auto;
+    border-radius: 50%;
+    transition: 500ms;
+}
+.logo:hover{
+    border-radius: 10%;
+    transform: scale(1.1);
+}
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-links a{
+    font-size: 18px;
+    margin: 0 0 0 2vw;
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color:#FFFFFF;
+    text-shadow: var(--nav-text-shadow);
+    border-left:2px solid rgba(93, 248, 73, 0);
+    border-right:2px solid rgba(93, 248, 73, 0);
+    transition: 300ms;
+}
+.nav-links a:hover{
+    border-left:2px solid rgba(93, 248, 73, 0.5);
+    border-right:2px solid rgba(93, 248, 73, 0.5);
+}
+
+/* dropdown start */
+.dropdown{
+    position:relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.7);
+    
+}
+.dropdown-content span{
+    display: block;
+    padding:20px;
+}
+.dropdown-content span:hover{
+    background-color:rgba(0, 0, 0, 1);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    
+}
+
+/* dropdown end */
+main{
+    box-sizing: border-box;
+    position: relative;
+    width: 100vw;
+    max-width:100%;
+    height:100vh;
+    background: url(images/leaf.jpg) no-repeat top;
+    padding-top:40px;
+    padding-bottom:20px;
+}
+
+footer{
+    height:20vh;
+    background: rgba(0, 0, 0, 0.9);
+    color:#FFFFFF;
+}
+@media (max-width:1080px){
+    .container{
+        width:80%;
+    }
+}
+@media (max-width:935px){
+    .user-additional{
+        margin-top:10px;
+    }
+}
+@media (max-width:720px){
+    .container{
+        width:100%;
+    }
+}
+@media (max-width: 600px){
+    .nav-links a{
+        margin: 4px 0 4px 2vw;
+    }
+}
